@@ -21,8 +21,7 @@ public class Aluno {
 	private String nome;
 	
 	@NotNull
-	@Size(max = 2)
-	private int idade;
+	private Integer idade;
 	
 	@NotNull
 	@Size(min =10 , max = 50)
@@ -44,11 +43,11 @@ public class Aluno {
 		this.nome = nome;
 	}
 
-	public int getIdade() {
+	public Integer getIdade() {
 		return idade;
 	}
 
-	public void setIdade(int idade) {
+	public void setIdade(Integer idade) {
 		this.idade = idade;
 	}
 
