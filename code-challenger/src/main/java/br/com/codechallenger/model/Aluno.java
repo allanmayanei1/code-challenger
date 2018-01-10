@@ -82,7 +82,20 @@ public class Aluno {
 		} else if (!codigo.equals(other.codigo))
 			return false;
 		return true;
+	}
+
+	public Aluno(Long codigo, String nome, Integer idade, String endereco) {
+		super();
+		this.codigo = codigo;
+		this.nome = nome;
+		this.idade = idade;
+		this.endereco = endereco;
+	}
+
+	public Aluno() {
 	} 
+	
+	
 	
 	
 }
