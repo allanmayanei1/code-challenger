@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>Loja</title>
+
+<meta charset="ISO-8859-1">
+
+<meta
+	content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0'
+	name='viewport' />
+<meta name="viewport" content="width=device-width" />
+</head>
+<body ng-controller="controllerAluno">
+	<div class="container">
+		<div class="panel panel-primary">
+			<div class="panel-heading">
+				<h3 class="panel-title">Cadastro de Aluno</h3>
+			</div>
+			<div class="panel-body">
+				<form ng-submit="salvarAluno(aluno)">
+					<div class="row">
+						<div class="form-group col-sm-3">
+							<label for="exampleInputEmail1">Codigo:</label> <input type="text"
+								class="form-control" id="codigo" name="codigo" placeholder="codigo"
+								required disabled ng-model="aluno.codigo">
+						</div>
+					</div>
+					<div class="row">
+
+						<div class="form-group col-sm-8">
+							<label for="exampleInputEmail1">Nome:</label> <input type="text"
+								class="form-control" id="nome" name="nome" placeholder="Nome"
+								minlength="10" maxlength="50" required ng-model="aluno.nome">
+						</div>
+						<div class="form-group col-sm-4">
+							<label for="exampleInputPassword1">Idade</label> <input
+								type="number" class="form-control" id="idade" name="idade"
+								placeholder="Idade" max="100" required ng-model="aluno.idade">
+						</div>
+
+
+					</div>
+					<div class="form-group">
+						<label for="exampleInputFile">Endereço</label> <input type="text"
+							class="form-control" id="endereco" name="endereco"
+							placeholder="Endereço" minlength="10" maxlength="50" required ng-model="aluno.endereco">
+					</div>
+					<button type="submit" class="btn btn-success">Salvar</button>
+					<button type="reset" class="btn btn-danger">Salvar</button>
+				</form>
+			</div>
+		</div>
+	</div>
+</body>
+</html>

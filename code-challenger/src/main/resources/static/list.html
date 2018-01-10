@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>Loja</title>
+
+<meta charset="ISO-8859-1">
+
+<meta
+	content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0'
+	name='viewport' />
+<meta name="viewport" content="width=device-width" />
+<title>Insert title here</title>
+</head>
+<body>
+	<div ng-controller="controllerAluno" ng-init="getListAluno();"
+		class="container">
+		<div class="panel panel-primary">
+			<div class="panel-heading">
+				<h3 class="panel-title">Lista de Aluno</h3>
+				
+			</div>
+			<div class="panel-body">
+				<label>Filtro <input class="form-control" type="text" ng-model="filtro"></label><br>
+				<div class="content table-responsive table-full-width">
+					<table class="table table-hover">
+						<thead>
+							<th>Codigo</th>
+							<th>Nome</th>
+							<th>Idade</th>
+							<th>Endereço</th>
+							<th>Remover</th>
+							<th>Editar</th>
+						</thead>
+						<tbody>
+							<tr ng-repeat="aluno in listAluno | filter:filtro">
+								<td>{{aluno.codigo}}</td>
+								<td>{{aluno.nome}}</td>
+								<td>{{aluno.idade}}</td>
+								<td>{{aluno.endereco}}</td>
+								<td><a href ng-click="removerAluno(aluno.codigo);">Apagar
+										<img alt="Remover" src="img/delete-icon.png" border="0">
+								</a></td>
+								<td><a href ng-click="editaraluno(aluno.codigo);">Editar
+										<img alt="Editar" src="img/edit-icon.png" border="0">
+								</a></td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+			</div>
+		</div>
+	</div>
+
+</body>
+</html>
